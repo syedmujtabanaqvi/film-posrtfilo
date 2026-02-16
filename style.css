@@ -532,3 +532,72 @@ nav ul li a:hover { color: var(--primary-color); }
     
     .section-title { font-size: 1.5rem; }
 }
+/* --- Awards Section Styling --- */
+#awards {
+    margin-top: 100px; /* Uper margin add kiya hai */
+    padding-top: 40px;
+}
+
+.awards-grid {
+    display: flex; /* Row layout ke liye */
+    flex-wrap: wrap; /* Mobile par stack hone ke liye */
+    justify-content: center; /* Center alignment */
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.award-card {
+    flex: 1;
+    min-width: 300px; /* Card ki width control karne ke liye */
+    max-width: 400px; /* Zyada phailne se rokne ke liye */
+    background: rgba(10, 17, 24, 0.6);
+    border: 1px solid rgba(0, 212, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.4s ease;
+}
+
+.award-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+    box-shadow: 0 15px 40px rgba(0, 212, 255, 0.2);
+}
+
+.award-img-container {
+    width: 100%;
+    height: 220px;
+    background: #000;
+}
+
+.award-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+
+.award-info {
+    padding: 25px;
+}
+
+.award-tag {
+    font-size: 0.65rem;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 3px 12px;
+    border-radius: 50px;
+    display: inline-block;
+    margin-bottom: 12px;
+    
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    #awards {
+        margin-top: 60px; /* Mobile par thora kam margin */
+    }
+    
+    .award-card {
+        min-width: 100%; /* Mobile par full width */
+    }
+}
